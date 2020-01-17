@@ -12,39 +12,39 @@ function playRound(id) {
         let computerSelection = computerPlay()
         activeBtn("computer-" + rps[computerSelection])
         if(playerSelection === computerSelection) {
-            document.getElementById("status").innerHTML = "Tie!"
+            document.getElementById("status").textContent = "Tie!"
         }
         else if(Math.abs(playerSelection - computerSelection) === 1) {
             if(playerSelection > computerSelection) {
                 userScore++
-                document.getElementById("status").innerHTML = "You Win! " + rps[playerSelection] + " beats " + rps[computerSelection]
+                document.getElementById("status").textContent = "You Win! " + rps[playerSelection] + " beats " + rps[computerSelection]
             }
             else {
                 computerScore++
-                 document.getElementById("status").innerHTML = "You Lose! " + rps[computerSelection] + " beats " + rps[playerSelection]
+                 document.getElementById("status").textContent = "You Lose! " + rps[computerSelection] + " beats " + rps[playerSelection]
             }
         }
         else if(Math.abs(playerSelection - computerSelection) === 2) {
             if(playerSelection < computerSelection) {
                 userScore++
-                document.getElementById("status").innerHTML = "You Win! " + rps[computerSelection] + " beats " + rps[playerSelection]
+                document.getElementById("status").textContent = "You Win! " + rps[computerSelection] + " beats " + rps[playerSelection]
             }
             else {
                 computerScore++
-                document.getElementById("status").innerHTML = "You Lose! " + rps[playerSelection] + " beats " + rps[computerSelection]
+                document.getElementById("status").textContent = "You Lose! " + rps[playerSelection] + " beats " + rps[computerSelection]
             }
         }
 
-        document.getElementById("score").innerHTML = userScore + " : " + computerScore
+        document.getElementById("score").textContent = userScore + " : " + computerScore
     }
     if(count === 5) {
         if(userScore > computerScore)
-            document.getElementById("status").innerHTML = "You Win!"
+            document.getElementById("status").textContent = "You Win!"
         else if(computerScore > userScore)
-            document.getElementById("status").innerHTML = "You Lose!"
+            document.getElementById("status").textContent = "You Lose!"
         else
-            document.getElementById("status").innerHTML = "You Tie!"
-        document.getElementById("play-again").innerHTML = "Play Again"
+            document.getElementById("status").textContent = "You Tie!"
+        document.getElementById("play-again").textContent = "Play Again"
         
     }
 }
