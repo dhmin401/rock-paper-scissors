@@ -43,7 +43,7 @@ function playRound(id) {
         else if(computerScore > userScore)
             document.getElementById("status").innerHTML = "You Lose!"
         else
-            document.getElementById("status").innerHTML = "Tie!"
+            document.getElementById("status").innerHTML = "You Tie!"
         document.getElementById("play-again").innerHTML = "Play Again"
         
     }
