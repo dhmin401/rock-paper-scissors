@@ -82,5 +82,5 @@ function playAgain() {
     document.getElementById("score").innerHTML = userScore + " : " + computerScore
     document.getElementById("play-again").innerHTML = ""
     document.getElementById("status").innerHTML = ""
-    inActiveBtn()
+    inActiveBtn() 
 }
